@@ -1,1 +1,19 @@
+server:
+  port: 6060
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dreamer?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: Wz.0323.
+
+# open api配置
+springdoc:
+  packages-to-scan: com.imi4u36d.dreamer.controller
+  swagger-ui:
+    enabled: true
+  api-docs:
+    enabled: true
+  # swagger-ui custom path
+  swagger-ui.path: doc.html
 

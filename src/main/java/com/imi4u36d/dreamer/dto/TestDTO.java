@@ -1,4 +1,4 @@
-package com.imi4u36d.dreamer.entity;
+package com.imi4u36d.dreamer.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
