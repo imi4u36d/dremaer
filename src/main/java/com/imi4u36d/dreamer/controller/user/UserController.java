@@ -1,14 +1,15 @@
 package com.imi4u36d.dreamer.controller.user;
 
+import com.imi4u36d.dreamer.dto.UserResDTO;
 import com.imi4u36d.dreamer.dto.base.ResultDTO;
 import com.imi4u36d.dreamer.service.user.UserService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.Parameters;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Objects;
 
 /**
  * <p>
@@ -35,9 +36,19 @@ public class UserController {
             @Parameter(name = "username", description = "用户名", required = true),
             @Parameter(name = "pwd", description = "密码", required = true)
     })
+    @Operation(summary = "注册接口", description = "注册接口")
     public ResultDTO<Boolean> signUp(@RequestParam String username, @RequestParam String pwd) {
         Boolean res = userService.signUp(username, pwd);
         return res ? ResultDTO.success(res) : ResultDTO.fail("500", "注册失败");
     }
 
+    @GetMapping("/selectByUserId")
+    @Parameters({
+            @Parameter(name = "userId", description = "用户id", required = true)
+    })
+    @Operation(summary = "根据用户id查询用户信息", description = "根据用户id查询用户信息")
+    public ResultDTO<UserResDTO> selectByUserId(@RequestParam String userId) {
+        UserResDTO res = userService.selectByUserId(userId);
+        return Objects.nonNull(res) ? ResultDTO.success(res) : ResultDTO.fail("500", "用户不存在");
+    }
 }

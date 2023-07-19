@@ -2,6 +2,7 @@ package com.imi4u36d.dreamer.service.user.impl;
 
 import cn.hutool.core.util.IdUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.imi4u36d.dreamer.dto.UserResDTO;
 import com.imi4u36d.dreamer.entity.user.User;
 import com.imi4u36d.dreamer.mapper.UserMapper;
 import com.imi4u36d.dreamer.service.user.UserService;
@@ -34,5 +35,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public User searchByUserNameAndPwd(String username, String pwd) {
         return lambdaQuery().eq(User::getUsername, username).eq(User::getPwd, pwd).one();
+    }
+
+    @Override
+    public UserResDTO selectByUserId(String userId) {
+
+        return null;
     }
 }

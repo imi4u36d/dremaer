@@ -1,5 +1,7 @@
 package com.imi4u36d.dreamer.service;
 
+import cn.hutool.jwt.JWT;
+import cn.hutool.jwt.JWTUtil;
 import com.imi4u36d.dreamer.dto.login.LoginResDTO;
 import com.imi4u36d.dreamer.entity.user.User;
 import com.imi4u36d.dreamer.service.user.UserService;
@@ -7,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -21,6 +25,9 @@ import java.util.Objects;
 @Service
 @Transactional(rollbackFor = Exception.class)
 public class LoginServiceImpl implements LoginService {
+
+    // JWT KEY
+    private static final String KEY = "imi4u36d";
 
     // 用户接口
     private final UserService userService;
@@ -40,13 +47,15 @@ public class LoginServiceImpl implements LoginService {
     public LoginResDTO login(String username, String pwd) {
         User user = userService.searchByUserNameAndPwd(username, pwd);
         if (Objects.nonNull(user)) {
-            LoginResDTO resDTO = new LoginResDTO();
-            resDTO.setUserId(user.getId());
-            resDTO.setUsername(user.getUsername());
-            resDTO.setToken("token");
-            return resDTO;
+            // 生成token
+            Map<String, Object> tokenMap = new HashMap<>(2);
+            tokenMap.put("id", user.getId());
+            tokenMap.put("username", user.getUsername());
+            tokenMap.put("expire_time", System.currentTimeMillis() + 1000 * 60 * 60 * 24 * 15);
+            String token = JWTUtil.createToken(tokenMap, KEY.getBytes());
+            return LoginResDTO.builder().userId(user.getId()).username(user.getUsername()).token(token).build();
         } else {
-            return null;
+            return new LoginResDTO();
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.imi4u36d.dreamer.service.user;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.imi4u36d.dreamer.dto.UserResDTO;
 import com.imi4u36d.dreamer.entity.user.User;
 
 /**
@@ -30,4 +31,13 @@ public interface UserService extends IService<User> {
      * @return 用户信息
      */
     User searchByUserNameAndPwd(String username, String pwd);
+
+    /**
+     * 根据用户id查询用户信息
+     *
+     * @param userId 用户id
+     * @return 用户信息
+     */
+    UserResDTO selectByUserId(String userId);
+
 }
