@@ -1,3 +1,12 @@
 spring:
   application:
     name: dreamer
+
+#mybatis的相关配置
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.imi4u36d.dreamer.entity
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imi4u36d.dreamer.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.imi4u36d.dreamer.entity.user.User">
+        <result column="auto_pk" property="autoPk"/>
+        <result column="id" property="id"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="created_by" property="createdBy"/>
+        <result column="updated_at" property="updatedAt"/>
+        <result column="updated_by" property="updatedBy"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="cur_version" property="curVersion"/>
+        <result column="user_name" property="username"/>
+        <result column="pwd" property="pwd"/>
+        <result column="cur_status" property="curStatus"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        auto_pk,
+        id,
+        created_at,
+        created_by,
+        updated_at,
+        updated_by,
+        is_deleted,
+        cur_version,
+        user_name, pwd, cur_status
+    </sql>
+
+</mapper>
