@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Objects;
+
 /**
  * <p>
  * 用户表 服务实现类
@@ -39,7 +41,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     public UserResDTO selectByUserId(String userId) {
-
-        return null;
+        User user = getById(userId);
+        if (Objects.isNull(user)) {
+            return null;
+        }
+        return user.toUserResDTO();
     }
 }

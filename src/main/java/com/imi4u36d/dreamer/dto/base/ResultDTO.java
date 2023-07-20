@@ -2,6 +2,7 @@ package com.imi4u36d.dreamer.dto.base;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,6 +17,7 @@ import java.io.Serializable;
  * @version v1.0.0
  */
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(name = "ResultDTO", description = "基本返回数据模型")

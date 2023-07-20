@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -51,8 +52,9 @@ public class LoginServiceImpl implements LoginService {
             Map<String, Object> tokenMap = new HashMap<>(2);
             tokenMap.put("id", user.getId());
             tokenMap.put("username", user.getUsername());
-            tokenMap.put("expire_time", System.currentTimeMillis() + 1000 * 60 * 60 * 24 * 15);
-            String token = JWTUtil.createToken(tokenMap, KEY.getBytes());
+            // 获取10分钟后的Date对象
+            Date expAt = new Date(System.currentTimeMillis() + 1 * 60 * 1000);
+            String token = JWT.create().addPayloads(tokenMap).setKey(KEY.getBytes()).setExpiresAt(expAt).sign();
             return LoginResDTO.builder().userId(user.getId()).username(user.getUsername()).token(token).build();
         } else {
             return new LoginResDTO();

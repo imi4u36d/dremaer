@@ -12,8 +12,9 @@ springdoc:
   packages-to-scan: com.imi4u36d.dreamer.controller
   swagger-ui:
     enabled: true
+    csrf:
+      header-name: token
   api-docs:
     enabled: true
   # swagger-ui custom path
   swagger-ui.path: doc.html
-

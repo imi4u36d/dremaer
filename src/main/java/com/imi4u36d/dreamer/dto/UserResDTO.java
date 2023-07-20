@@ -26,4 +26,7 @@ public class UserResDTO implements Serializable {
 
     @Schema(name = "username", description = "用户名")
     private String username;
+
+    @Schema(description = "当前状态 0未启用 1启用")
+    private Byte curStatus;
 }
