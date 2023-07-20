@@ -1,5 +1,6 @@
 package com.imi4u36d.dreamer.config.aspect;
 
+import cn.hutool.json.JSONUtil;
 import cn.hutool.jwt.JWTValidator;
 import com.imi4u36d.dreamer.dto.base.ResultDTO;
 import jakarta.servlet.http.HttpServletRequest;
@@ -44,7 +45,7 @@ public class AuthHandleInterceptor implements HandlerInterceptor {
             ResultDTO<Object> resultDTO = ResultDTO.builder().code("401").msg("身份验证出错-token非法").build();
             log.info("身份验证出错-token非法[空token]");
             response.setContentType("application/json;charset=UTF-8");
-            response.getWriter().write(resultDTO.toString());
+            response.getWriter().write(JSONUtil.toJsonStr(resultDTO));
             return false;
         }
 
@@ -56,7 +57,7 @@ public class AuthHandleInterceptor implements HandlerInterceptor {
             ResultDTO<Object> resultDTO = ResultDTO.builder().code("401").msg("身份验证出错：" + e.getMessage()).build();
             log.info("身份验证出错：{}", e.getMessage());
             response.setContentType("application/json;charset=UTF-8");
-            response.getWriter().write(resultDTO.toString());
+            response.getWriter().write(JSONUtil.toJsonStr(resultDTO));
             return false;
         }
 
