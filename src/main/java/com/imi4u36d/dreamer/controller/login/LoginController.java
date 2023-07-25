@@ -34,7 +34,7 @@ public class LoginController {
         this.loginService = loginService;
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     @Operation(summary = "登陆接口", description = "后端管理系统登陆接口采用账号密码登陆")
     @Parameters({
             @Parameter(name = "username", description = "用户名", required = true),

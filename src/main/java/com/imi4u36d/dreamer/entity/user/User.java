@@ -32,9 +32,6 @@ public class User extends BaseEntity {
     @Schema(description = "密码")
     private String pwd;
 
-    @Schema(description = "当前状态 0未启用 1启用")
-    private Byte curStatus;
-
     public UserResDTO toUserResDTO() {
         UserResDTO userResDTO = new UserResDTO();
         userResDTO.setUserId(this.getId());

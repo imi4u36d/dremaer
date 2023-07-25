@@ -40,7 +40,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         user.setId(IdUtil.getSnowflakeNextId());
         user.setUsername(userName);
         // 设置加密密码
-        user.setPwd(SecureUtil.sha1(pwd));
+        user.setPwd(pwd);
         return save(user);
     }
 

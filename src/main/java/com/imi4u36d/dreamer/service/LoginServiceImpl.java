@@ -53,7 +53,7 @@ public class LoginServiceImpl implements LoginService {
             tokenMap.put("id", user.getId());
             tokenMap.put("username", user.getUsername());
             // 获取10分钟后的Date对象
-            Date expAt = new Date(System.currentTimeMillis() + 1 * 60 * 1000);
+            Date expAt = new Date(System.currentTimeMillis() + 10 * 60 * 1000);
             String token = JWT.create().addPayloads(tokenMap).setKey(KEY.getBytes()).setExpiresAt(expAt).sign();
             return LoginResDTO.builder().userId(user.getId()).username(user.getUsername()).token(token).build();
         } else {
