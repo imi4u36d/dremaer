@@ -34,10 +34,6 @@ public class NoteResDTO implements Serializable {
     @Schema(description = "笔记内容")
     private String noteContent;
 
-    @Schema(description = "当前状态 0未启用 1启用")
-    private Byte curStatus;
-
-
     public static List<NoteResDTO> convert(List<Note> records) {
         return BeanUtil.copyToList(records, NoteResDTO.class);
     }

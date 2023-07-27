@@ -49,7 +49,7 @@ public class BaseEntity {
     protected Long updatedBy;
 
     @Schema(description = "当前状态 0未启用 1启用")
-    private Byte curStatus;
+    private Integer curStatus;
 
     @Schema(name = "deleted", description = "逻辑删除的标记位（0：否，1:是）")
     @TableLogic(value = "0", delval = "1")

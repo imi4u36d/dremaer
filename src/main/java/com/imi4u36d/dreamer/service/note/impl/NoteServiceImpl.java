@@ -23,7 +23,6 @@ public class NoteServiceImpl extends ServiceImpl<NoteMapper, Note> implements No
 
     @Override
     public Page<NoteResDTO> notePage(Integer page, Integer size, String noteTitle, String noteContent, Long userId) {
-
         // 构造分页对象
         Page<Note> notePage = new Page<>(page, size);
         // 构造查询条件
@@ -38,5 +37,31 @@ public class NoteServiceImpl extends ServiceImpl<NoteMapper, Note> implements No
         noteResDTOPage.setTotal(notePageResult.getTotal());
         noteResDTOPage.setRecords(NoteResDTO.convert(notePageResult.getRecords()));
         return noteResDTOPage;
+    }
+
+    @Override
+    public Boolean addNote(String userId, String noteTitle, String noteContent) {
+        Note note = new Note();
+        note.setUserId(userId);
+        note.setNoteTitle(noteTitle);
+        note.setNoteContent(noteContent);
+        return this.save(note);
+    }
+
+    @Override
+    public Boolean updateNote(Long noteId, String noteTitle, String noteContent) {
+        Note note = new Note();
+        note.setId(noteId);
+        note.setNoteTitle(noteTitle);
+        note.setNoteContent(noteContent);
+        return this.updateById(note);
+    }
+
+    @Override
+    public Boolean updateNoteStatus(Long noteId, Integer noteStatus) {
+        Note note = new Note();
+        note.setId(noteId);
+        note.setCurStatus(noteStatus);
+        return this.updateById(note);
     }
 }
