@@ -32,24 +32,25 @@ public class UserController {
         this.userService = userService;
     }
 
+    @Operation(summary = "注册接口", description = "注册接口")
     @PostMapping("/signUp")
     @Parameters({
             @Parameter(name = "username", description = "用户名", required = true),
             @Parameter(name = "pwd", description = "密码", required = true)
     })
-    @Operation(summary = "注册接口", description = "注册接口")
     public ResultDTO<Boolean> signUp(@RequestParam String username, @RequestParam String pwd) {
         Boolean res = userService.signUp(username, pwd);
         return res ? ResultDTO.success(res) : ResultDTO.fail("500", "注册失败");
     }
 
+    @Operation(summary = "根据用户id查询用户信息", description = "根据用户id查询用户信息")
     @GetMapping("/selectByUserId")
     @Parameters({
             @Parameter(name = "userId", description = "用户id", required = true)
     })
-    @Operation(summary = "根据用户id查询用户信息", description = "根据用户id查询用户信息")
     public ResultDTO<UserResDTO> selectByUserId(@RequestParam String userId) {
         UserResDTO res = userService.selectByUserId(userId);
         return Objects.nonNull(res) ? ResultDTO.success(res) : ResultDTO.fail("500", "用户不存在");
     }
+
 }
