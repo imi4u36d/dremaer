@@ -57,7 +57,7 @@ public class LoginServiceImpl implements LoginService {
             String token = JWT.create().addPayloads(tokenMap).setKey(KEY.getBytes()).setExpiresAt(expAt).sign();
             return LoginResDTO.builder().userId(user.getId()).username(user.getUsername()).token(token).build();
         } else {
-            return new LoginResDTO();
+            return null;
         }
     }
 }

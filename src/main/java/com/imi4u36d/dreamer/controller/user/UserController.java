@@ -6,8 +6,8 @@ import com.imi4u36d.dreamer.service.user.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.Parameters;
-import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Objects;
@@ -26,13 +26,10 @@ import java.util.Objects;
 public class UserController {
 
     // 用户接口
-    private final UserService userService;
+    @Autowired
+    private UserService userService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
-
-    @Operation(summary = "注册接口", description = "注册接口")
+    @Operation(summary = "注册接口", description = "注册接口(使用账号密码新增用户)")
     @PostMapping("/signUp")
     @Parameters({
             @Parameter(name = "username", description = "用户名", required = true),

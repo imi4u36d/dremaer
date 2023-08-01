@@ -36,7 +36,6 @@ public class User extends BaseEntity {
         UserResDTO userResDTO = new UserResDTO();
         userResDTO.setUserId(this.getId());
         userResDTO.setUsername(this.getUsername());
-        userResDTO.setCurStatus(this.getCurStatus());
         return userResDTO;
     }
 }
