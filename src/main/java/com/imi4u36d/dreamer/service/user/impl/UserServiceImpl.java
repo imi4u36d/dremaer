@@ -2,6 +2,7 @@ package com.imi4u36d.dreamer.service.user.impl;
 
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.crypto.SecureUtil;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.imi4u36d.dreamer.dto.UserResDTO;
 import com.imi4u36d.dreamer.entity.user.User;
@@ -57,7 +58,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     public User searchByUserNameAndPwd(String username, String pwd) {
-        return lambdaQuery().eq(User::getUsername, username).eq(User::getPwd, pwd).one();
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper
+                .eq(User::getPwd, pwd)
+                .and(i -> i.eq(User::getUsername, username)
+                        .or().eq(User::getEmail, username));
+        return getOne(queryWrapper);
     }
 
     @Override
