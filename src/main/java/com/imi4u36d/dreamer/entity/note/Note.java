@@ -1,6 +1,8 @@
 package com.imi4u36d.dreamer.entity.note;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.imi4u36d.dreamer.dto.NoteDTO;
 import com.imi4u36d.dreamer.entity.BaseEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
@@ -30,4 +32,10 @@ public class Note extends BaseEntity {
 
     @Schema(description = "笔记内容")
     private String noteContent;
+
+    public Object toDTO() {
+        NoteDTO dto = new NoteDTO();
+        BeanUtil.copyProperties(this, dto);
+        return dto;
+    }
 }

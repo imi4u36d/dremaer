@@ -1,7 +1,7 @@
 package com.imi4u36d.dreamer.controller.note;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.imi4u36d.dreamer.dto.NoteResDTO;
+import com.imi4u36d.dreamer.dto.NoteDTO;
 import com.imi4u36d.dreamer.dto.base.ResultDTO;
 import com.imi4u36d.dreamer.service.note.NoteService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -88,12 +88,12 @@ public class NoteController {
             @Parameter(name = "noteContent", description = "笔记内容"),
             @Parameter(name = "userId", description = "用户id"),
     })
-    public ResultDTO<Page<NoteResDTO>> notePage(@RequestParam(required = false, defaultValue = "1") Integer page,
-                                                @RequestParam(required = false, defaultValue = "10") Integer size,
-                                                @RequestParam(required = false) String noteTitle,
-                                                @RequestParam(required = false) String noteContent,
-                                                @RequestParam(required = false) Long userId) {
-        Page<NoteResDTO> noteResDTOPage = noteService.notePage(page, size, noteTitle, noteContent, userId);
+    public ResultDTO<Page<NoteDTO>> notePage(@RequestParam(required = false, defaultValue = "1") Integer page,
+                                             @RequestParam(required = false, defaultValue = "10") Integer size,
+                                             @RequestParam(required = false) String noteTitle,
+                                             @RequestParam(required = false) String noteContent,
+                                             @RequestParam(required = false) Long userId) {
+        Page<NoteDTO> noteResDTOPage = noteService.notePage(page, size, noteTitle, noteContent, userId);
         return ResultDTO.success(noteResDTOPage);
     }
 }

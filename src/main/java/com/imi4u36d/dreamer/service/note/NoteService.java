@@ -2,10 +2,8 @@ package com.imi4u36d.dreamer.service.note;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.imi4u36d.dreamer.dto.NoteResDTO;
+import com.imi4u36d.dreamer.dto.NoteDTO;
 import com.imi4u36d.dreamer.entity.note.Note;
-
-import java.util.List;
 
 /**
  * <p>
@@ -27,7 +25,7 @@ public interface NoteService extends IService<Note> {
      * @param userId      用户id
      * @return 笔记列表
      */
-    Page<NoteResDTO> notePage(Integer page, Integer size, String noteTitle, String noteContent, Long userId);
+    Page<NoteDTO> notePage(Integer page, Integer size, String noteTitle, String noteContent, Long userId);
 
     /**
      * 新增笔记

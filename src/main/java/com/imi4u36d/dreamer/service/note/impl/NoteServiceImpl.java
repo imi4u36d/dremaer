@@ -1,12 +1,15 @@
 package com.imi4u36d.dreamer.service.note.impl;
 
+import cn.hutool.core.util.IdUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.imi4u36d.dreamer.dto.NoteResDTO;
+import com.imi4u36d.dreamer.dto.NoteDTO;
 import com.imi4u36d.dreamer.entity.note.Note;
 import com.imi4u36d.dreamer.mapper.NoteMapper;
 import com.imi4u36d.dreamer.service.note.NoteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -22,7 +25,7 @@ import org.springframework.util.StringUtils;
 public class NoteServiceImpl extends ServiceImpl<NoteMapper, Note> implements NoteService {
 
     @Override
-    public Page<NoteResDTO> notePage(Integer page, Integer size, String noteTitle, String noteContent, Long userId) {
+    public Page<NoteDTO> notePage(Integer page, Integer size, String noteTitle, String noteContent, Long userId) {
         // 构造分页对象
         Page<Note> notePage = new Page<>(page, size);
         // 构造查询条件
@@ -33,15 +36,18 @@ public class NoteServiceImpl extends ServiceImpl<NoteMapper, Note> implements No
         // 执行查询
         Page<Note> notePageResult = this.page(notePage, queryWrapper);
         // 构造返回对象
-        Page<NoteResDTO> noteResDTOPage = new Page<>();
-        noteResDTOPage.setTotal(notePageResult.getTotal());
-        noteResDTOPage.setRecords(NoteResDTO.convert(notePageResult.getRecords()));
-        return noteResDTOPage;
+        Page<NoteDTO> NoteDTOPage = new Page<>();
+        NoteDTOPage.setTotal(notePageResult.getTotal());
+        NoteDTOPage.setCurrent(notePageResult.getCurrent());
+        NoteDTOPage.setSize(notePageResult.getSize());
+        NoteDTOPage.setRecords(NoteDTO.convert(notePageResult.getRecords()));
+        return NoteDTOPage;
     }
 
     @Override
     public Boolean addNote(String userId, String noteTitle, String noteContent) {
         Note note = new Note();
+        note.setId(IdUtil.getSnowflakeNextId());
         note.setUserId(userId);
         note.setNoteTitle(noteTitle);
         note.setNoteContent(noteContent);

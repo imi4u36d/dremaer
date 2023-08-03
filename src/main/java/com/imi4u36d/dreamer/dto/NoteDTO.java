@@ -23,7 +23,10 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(name = "NoteResDTO", description = "笔记返回数据模型")
-public class NoteResDTO implements Serializable {
+public class NoteDTO implements Serializable {
+
+    @Schema(description = "笔记id")
+    private Long id;
 
     @Schema(description = "用户id")
     private String userId;
@@ -34,7 +37,7 @@ public class NoteResDTO implements Serializable {
     @Schema(description = "笔记内容")
     private String noteContent;
 
-    public static List<NoteResDTO> convert(List<Note> records) {
-        return BeanUtil.copyToList(records, NoteResDTO.class);
+    public static List<NoteDTO> convert(List<Note> records) {
+        return BeanUtil.copyToList(records, NoteDTO.class);
     }
 }
