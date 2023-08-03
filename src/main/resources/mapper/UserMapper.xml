@@ -13,6 +13,7 @@
         <result column="is_deleted" property="isDeleted"/>
         <result column="cur_version" property="curVersion"/>
         <result column="user_name" property="username"/>
+        <result column="email" property="email"/>
         <result column="pwd" property="pwd"/>
         <result column="cur_status" property="curStatus"/>
     </resultMap>
@@ -27,7 +28,7 @@
         updated_by,
         is_deleted,
         cur_version,
-        user_name, pwd, cur_status
+        user_name, email, pwd, cur_status
     </sql>
 
 </mapper>

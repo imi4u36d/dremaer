@@ -33,7 +33,7 @@ public class WebConfig implements WebMvcConfigurer {
             "/api/login",
             "/api-docs/**",
             "/favicon.ico",
-            "/api/user/signUp/**",
+            "/api/user/signup",
     };
 
     /**

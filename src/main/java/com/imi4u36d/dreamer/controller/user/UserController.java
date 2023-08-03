@@ -30,7 +30,7 @@ public class UserController {
     private UserService userService;
 
     @Operation(summary = "注册接口", description = "注册接口(使用账号密码新增用户)")
-    @PostMapping("/signUp")
+    @GetMapping("/signup")
     @Parameters({
             @Parameter(name = "username", description = "用户名", required = true),
             @Parameter(name = "pwd", description = "密码", required = true)

@@ -31,12 +31,16 @@ public class User extends BaseEntity {
     @Schema(description = "用户名")
     private String username;
 
+    @Schema(description = "邮箱")
+    private String email;
+
     @Schema(description = "密码")
     private String pwd;
 
     public UserResDTO toUserResDTO() {
         UserResDTO userResDTO = new UserResDTO();
         userResDTO.setUserId(this.getId());
+        userResDTO.setEmail(this.getEmail());
         userResDTO.setUsername(this.getUsername());
         return userResDTO;
     }
