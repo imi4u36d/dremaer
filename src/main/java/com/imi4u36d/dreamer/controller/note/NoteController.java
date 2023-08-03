@@ -71,7 +71,7 @@ public class NoteController {
             @Parameter(name = "noteTitle", description = "笔记标题"),
             @Parameter(name = "noteContent", description = "笔记内容"),
     })
-    public ResultDTO<Boolean> addNote(@RequestParam String userId,
+    public ResultDTO<Boolean> addNote(@RequestParam Long userId,
                                       @RequestParam String noteTitle,
                                       @RequestParam String noteContent) {
         Boolean aBoolean = noteService.addNote(userId, noteTitle, noteContent);

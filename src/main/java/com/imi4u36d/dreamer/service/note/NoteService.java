@@ -35,7 +35,7 @@ public interface NoteService extends IService<Note> {
      * @param noteContent 笔记内容
      * @return true or false 成功或失败
      */
-    Boolean addNote(String userId, String noteTitle, String noteContent);
+    Boolean addNote(Long userId, String noteTitle, String noteContent);
 
     /**
      * 更新笔记

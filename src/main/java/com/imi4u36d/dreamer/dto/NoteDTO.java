@@ -29,13 +29,16 @@ public class NoteDTO implements Serializable {
     private Long id;
 
     @Schema(description = "用户id")
-    private String userId;
+    private Long userId;
 
     @Schema(description = "笔记标题")
     private String noteTitle;
 
     @Schema(description = "笔记内容")
     private String noteContent;
+
+    @Schema(description = "作者名称")
+    private String authorName;
 
     public static List<NoteDTO> convert(List<Note> records) {
         return BeanUtil.copyToList(records, NoteDTO.class);

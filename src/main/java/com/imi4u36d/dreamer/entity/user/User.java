@@ -23,8 +23,6 @@ import lombok.ToString;
 @Schema(name = "User", description = "$!{table.comment}")
 public class User extends BaseEntity {
 
-    private static final long serialVersionUID = 1L;
-
     @Schema(description = "用户id")
     private Long id;
 

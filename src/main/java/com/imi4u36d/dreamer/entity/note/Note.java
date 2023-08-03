@@ -8,6 +8,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 /**
  * <p>
  * 笔记表
@@ -22,10 +24,8 @@ import lombok.Setter;
 @Schema(name = "DNote", description = "$!{table.comment}")
 public class Note extends BaseEntity {
 
-    private static final long serialVersionUID = 1L;
-
     @Schema(description = "用户id")
-    private String userId;
+    private Long userId;
 
     @Schema(description = "笔记标题")
     private String noteTitle;
