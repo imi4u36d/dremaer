@@ -27,6 +27,7 @@ public class WebConfig implements WebMvcConfigurer {
      * 身份验证白名单-无需身份验证的路径
      */
     private static final String[] AUTH_PATH_PATTERNS = {
+            "/**",
             "/swagger-ui/**",
             "/v3/api-docs/**",
             "/doc.html/**",

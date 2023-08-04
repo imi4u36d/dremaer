@@ -64,6 +64,17 @@ public class NoteController {
     }
 
 
+    @Operation(summary = "根据id获取笔记详情", description = "根据id获取笔记详情")
+    @GetMapping("/getNoteById")
+    @Parameters({
+            @Parameter(name = "noteId", description = "笔记id"),
+    })
+    public ResultDTO<NoteDTO> getNoteById(@RequestParam Long noteId) {
+        NoteDTO noteDTO = noteService.getNoteById(noteId);
+        return ResultDTO.success(noteDTO);
+    }
+
+
     @Operation(summary = "新增笔记", description = "新增笔记")
     @PostMapping("/addNote")
     @Parameters({

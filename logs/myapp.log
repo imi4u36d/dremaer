@@ -1,0 +1,236 @@
+2023-08-04 10:19:30.218 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 19 class path changes (0 additions, 0 deletions, 19 modifications)
+2023-08-04 10:19:30.301 [Thread-5] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-6060"]
+2023-08-04 10:19:30.301 [Thread-5] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-08-04 10:19:30.306 [Thread-5] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-04 10:19:30.317 [Thread-5] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-6060"]
+2023-08-04 10:19:30.320 [Thread-5] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-6060"]
+2023-08-04 10:19:30.367 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-04 10:19:30.370 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-04 10:19:30.486 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Starting DreamerApplication using Java 17.0.8 with PID 37037 (/Users/wangzhuo/IdeaProjects/dreamer/target/classes started by wangzhuo in /Users/wangzhuo/IdeaProjects/dreamer)
+2023-08-04 10:19:30.486 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - The following 1 profile is active: "dev"
+2023-08-04 10:19:30.754 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-04 10:19:30.755 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 10:19:30.761 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2023-08-04 10:19:30.840 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6060 (http)
+2023-08-04 10:19:30.840 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-6060"]
+2023-08-04 10:19:30.841 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-04 10:19:30.841 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-08-04 10:19:30.847 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-04 10:19:30.847 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 359 ms
+2023-08-04 10:19:30.947 [restartedMain] INFO  org.redisson.Version - Redisson 3.23.2
+2023-08-04 10:19:30.962 [redisson-netty-5-4] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 10:19:31.056 [redisson-netty-5-19] INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 10:19:31.240 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-04 10:19:31.242 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 10:19:31.261 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-6060"]
+2023-08-04 10:19:31.263 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 6060 (http) with context path ''
+2023-08-04 10:19:31.270 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Started DreamerApplication in 0.801 seconds (process running for 60426.271)
+2023-08-04 10:19:31.273 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2023-08-04 10:19:34.424 [http-nio-6060-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 10:19:34.447 [http-nio-6060-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-04 10:19:34.454 [http-nio-6060-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2023-08-04 10:19:34.473 [http-nio-6060-exec-1] INFO  c.i.dreamer.config.aspect.AuthHandleInterceptor - 身份验证出错-token非法[空token]
+2023-08-04 10:19:40.052 [http-nio-6060-exec-3] INFO  c.i.dreamer.config.aspect.AuthHandleInterceptor - 身份验证出错-token非法[空token]
+2023-08-04 10:19:48.295 [http-nio-6060-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2023-08-04 10:19:48.308 [http-nio-6060-exec-5] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5570f85a
+2023-08-04 10:19:48.309 [http-nio-6060-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2023-08-04 10:23:48.398 [http-nio-6060-exec-9] INFO  c.i.dreamer.config.aspect.AuthHandleInterceptor - 身份验证出错-token非法[空token]
+2023-08-04 10:39:12.892 [http-nio-6060-exec-1] INFO  c.i.dreamer.config.aspect.AuthHandleInterceptor - 身份验证出错-token非法[空token]
+2023-08-04 11:16:23.799 [http-nio-6060-exec-4] INFO  c.i.dreamer.config.aspect.AuthHandleInterceptor - 身份验证出错-token非法[空token]
+2023-08-04 11:21:12.282 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Starting DreamerApplication using Java 17.0.8 with PID 17954 (/Users/wangzhuo/IdeaProjects/dreamer/target/classes started by wangzhuo in /Users/wangzhuo/IdeaProjects/dreamer)
+2023-08-04 11:21:12.283 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - The following 1 profile is active: "dev"
+2023-08-04 11:21:12.305 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-04 11:21:12.305 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-04 11:21:12.569 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 11 class path changes (0 additions, 0 deletions, 11 modifications)
+2023-08-04 11:21:12.582 [Thread-7] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:21:12.582 [Thread-7] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-08-04 11:21:12.583 [Thread-7] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-04 11:21:12.588 [Thread-7] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+2023-08-04 11:21:12.588 [Thread-7] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:21:12.590 [Thread-7] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:21:12.601 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2023-08-04 11:21:12.602 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2023-08-04 11:21:12.663 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Starting DreamerApplication using Java 17.0.8 with PID 37037 (/Users/wangzhuo/IdeaProjects/dreamer/target/classes started by wangzhuo in /Users/wangzhuo/IdeaProjects/dreamer)
+2023-08-04 11:21:12.663 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - The following 1 profile is active: "dev"
+2023-08-04 11:21:12.878 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-04 11:21:12.878 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 11:21:12.882 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-08-04 11:21:12.893 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-04 11:21:12.894 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 11:21:12.911 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2023-08-04 11:21:12.940 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6060 (http)
+2023-08-04 11:21:12.940 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:21:12.940 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-04 11:21:12.940 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-08-04 11:21:12.946 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-04 11:21:12.946 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 282 ms
+2023-08-04 11:21:13.042 [restartedMain] INFO  org.redisson.Version - Redisson 3.23.2
+2023-08-04 11:21:13.045 [redisson-netty-8-4] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 11:21:13.073 [redisson-netty-8-19] INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 11:21:13.219 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-04 11:21:13.221 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 11:21:13.238 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:21:13.239 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 6060 (http) with context path ''
+2023-08-04 11:21:13.245 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Started DreamerApplication in 0.599 seconds (process running for 64128.309)
+2023-08-04 11:21:13.246 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2023-08-04 11:21:13.345 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6060 (http)
+2023-08-04 11:21:13.350 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:21:13.351 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-04 11:21:13.351 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-08-04 11:21:13.384 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-04 11:21:13.384 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1078 ms
+2023-08-04 11:21:13.806 [restartedMain] INFO  org.redisson.Version - Redisson 3.23.2
+2023-08-04 11:21:13.824 [restartedMain] WARN  i.n.resolver.dns.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-08-04 11:21:13.906 [redisson-netty-2-4] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 11:21:13.967 [redisson-netty-2-19] INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 11:21:14.387 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2023-08-04 11:21:14.389 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 11:21:14.420 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:21:14.422 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-08-04 11:21:14.432 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:21:14.432 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-08-04 11:21:14.435 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:21:14.436 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:21:14.445 [restartedMain] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-04 11:21:14.454 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 6060 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 6060 or configure this application to listen on another port.
+
+2023-08-04 11:22:45.715 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Starting DreamerApplication using Java 17.0.8 with PID 18183 (/Users/wangzhuo/IdeaProjects/dreamer/target/classes started by wangzhuo in /Users/wangzhuo/IdeaProjects/dreamer)
+2023-08-04 11:22:45.717 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - The following 1 profile is active: "dev"
+2023-08-04 11:22:45.739 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-04 11:22:45.740 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-04 11:22:46.290 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-04 11:22:46.292 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 11:22:46.309 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2023-08-04 11:22:46.710 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6060 (http)
+2023-08-04 11:22:46.716 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:22:46.717 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-04 11:22:46.717 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-08-04 11:22:46.745 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-04 11:22:46.745 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1005 ms
+2023-08-04 11:22:47.150 [restartedMain] INFO  org.redisson.Version - Redisson 3.23.2
+2023-08-04 11:22:47.163 [restartedMain] WARN  i.n.resolver.dns.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-08-04 11:22:47.240 [redisson-netty-2-4] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 11:22:47.301 [redisson-netty-2-19] INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 11:22:47.711 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-04 11:22:47.713 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 11:22:47.745 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-6060"]
+2023-08-04 11:22:47.750 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 6060 (http) with context path ''
+2023-08-04 11:22:47.762 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Started DreamerApplication in 2.275 seconds (process running for 2.574)
+2023-08-04 11:22:47.958 [RMI TCP Connection(2)-10.100.119.64] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-04 11:22:47.958 [RMI TCP Connection(1)-10.100.119.64] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 11:22:47.958 [RMI TCP Connection(1)-10.100.119.64] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-04 11:22:47.959 [RMI TCP Connection(1)-10.100.119.64] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-04 11:22:48.084 [RMI TCP Connection(2)-10.100.119.64] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@371eb120
+2023-08-04 11:22:48.085 [RMI TCP Connection(2)-10.100.119.64] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-04 13:44:10.039 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-04 13:44:10.041 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-04 13:44:12.229 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Starting DreamerApplication using Java 17.0.8 with PID 32587 (/Users/wangzhuo/IdeaProjects/dreamer/target/classes started by wangzhuo in /Users/wangzhuo/IdeaProjects/dreamer)
+2023-08-04 13:44:12.230 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - The following 1 profile is active: "dev"
+2023-08-04 13:44:12.255 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-04 13:44:12.256 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-04 13:44:12.839 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-04 13:44:12.841 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 13:44:12.859 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2023-08-04 13:44:13.307 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6060 (http)
+2023-08-04 13:44:13.313 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-6060"]
+2023-08-04 13:44:13.314 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-04 13:44:13.314 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-08-04 13:44:13.344 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-04 13:44:13.344 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1088 ms
+2023-08-04 13:44:13.790 [restartedMain] INFO  org.redisson.Version - Redisson 3.23.2
+2023-08-04 13:44:13.805 [restartedMain] WARN  i.n.resolver.dns.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-08-04 13:44:13.883 [redisson-netty-2-5] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 13:44:13.950 [redisson-netty-2-19] INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 13:44:14.417 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-04 13:44:14.419 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 13:44:14.457 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-6060"]
+2023-08-04 13:44:14.463 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 6060 (http) with context path ''
+2023-08-04 13:44:14.475 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Started DreamerApplication in 2.502 seconds (process running for 2.869)
+2023-08-04 13:44:14.876 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-04 13:44:14.876 [RMI TCP Connection(1)-127.0.0.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 13:44:14.878 [RMI TCP Connection(1)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-04 13:44:14.879 [RMI TCP Connection(1)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-04 13:44:15.026 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ea6b589
+2023-08-04 13:44:15.027 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-04 14:58:54.765 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-08-04 14:58:54.772 [Thread-5] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-6060"]
+2023-08-04 14:58:54.773 [Thread-5] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-08-04 14:58:54.776 [Thread-5] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-04 14:58:54.780 [Thread-5] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-6060"]
+2023-08-04 14:58:54.782 [Thread-5] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-6060"]
+2023-08-04 14:58:54.808 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-04 14:58:54.809 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-04 14:58:54.870 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Starting DreamerApplication using Java 17.0.8 with PID 32587 (/Users/wangzhuo/IdeaProjects/dreamer/target/classes started by wangzhuo in /Users/wangzhuo/IdeaProjects/dreamer)
+2023-08-04 14:58:54.870 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - The following 1 profile is active: "dev"
+2023-08-04 14:58:55.109 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-04 14:58:55.109 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 14:58:55.112 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-08-04 14:58:55.178 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6060 (http)
+2023-08-04 14:58:55.179 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-6060"]
+2023-08-04 14:58:55.179 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-04 14:58:55.179 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-08-04 14:58:55.185 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-04 14:58:55.185 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 314 ms
+2023-08-04 14:58:55.280 [restartedMain] INFO  org.redisson.Version - Redisson 3.23.2
+2023-08-04 14:58:55.291 [redisson-netty-5-4] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 14:58:55.306 [redisson-netty-5-19] INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 14:58:55.457 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-04 14:58:55.459 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 14:58:55.475 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-6060"]
+2023-08-04 14:58:55.476 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 6060 (http) with context path ''
+2023-08-04 14:58:55.482 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Started DreamerApplication in 0.631 seconds (process running for 4483.94)
+2023-08-04 14:58:55.483 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2023-08-04 14:58:56.878 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-08-04 14:58:56.895 [Thread-7] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-6060"]
+2023-08-04 14:58:56.895 [Thread-7] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-08-04 14:58:56.896 [Thread-7] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-6060"]
+2023-08-04 14:58:56.897 [Thread-7] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-6060"]
+2023-08-04 14:58:57.054 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Starting DreamerApplication using Java 17.0.8 with PID 32587 (/Users/wangzhuo/IdeaProjects/dreamer/target/classes started by wangzhuo in /Users/wangzhuo/IdeaProjects/dreamer)
+2023-08-04 14:58:57.055 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - The following 1 profile is active: "dev"
+2023-08-04 14:58:57.212 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-04 14:58:57.212 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 14:58:57.215 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-08-04 14:58:57.264 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6060 (http)
+2023-08-04 14:58:57.265 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-6060"]
+2023-08-04 14:58:57.265 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-04 14:58:57.265 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-08-04 14:58:57.269 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-04 14:58:57.270 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 214 ms
+2023-08-04 14:58:57.354 [restartedMain] INFO  org.redisson.Version - Redisson 3.23.2
+2023-08-04 14:58:57.356 [redisson-netty-8-5] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 14:58:57.372 [redisson-netty-8-19] INFO  org.redisson.connection.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 14:58:57.497 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-04 14:58:57.499 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 14:58:57.513 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-6060"]
+2023-08-04 14:58:57.514 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 6060 (http) with context path ''
+2023-08-04 14:58:57.520 [restartedMain] INFO  com.imi4u36d.dreamer.DreamerApplication - Started DreamerApplication in 0.485 seconds (process running for 4485.979)
+2023-08-04 14:58:57.522 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2023-08-04 14:58:59.197 [http-nio-6060-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 14:58:59.197 [http-nio-6060-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-04 14:58:59.205 [http-nio-6060-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2023-08-04 14:58:59.216 [http-nio-6060-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2023-08-04 14:58:59.227 [http-nio-6060-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@147a943e
+2023-08-04 14:58:59.228 [http-nio-6060-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.

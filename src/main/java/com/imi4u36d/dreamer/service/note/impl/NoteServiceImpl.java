@@ -18,6 +18,7 @@ import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -96,5 +97,21 @@ public class NoteServiceImpl extends ServiceImpl<NoteMapper, Note> implements No
         note.setId(noteId);
         note.setCurStatus(noteStatus);
         return this.updateById(note);
+    }
+
+    @Override
+    public NoteDTO getNoteById(Long noteId) {
+        Note note = this.getById(noteId);
+        if (note == null) {
+            return null;
+        }
+
+        NoteDTO dto = note.toDTO();
+        // 获取用户信息
+        User user = userService.getById(note.getUserId());
+        if (Objects.nonNull(user)) {
+            dto.setAuthorName(user.getUsername());
+        }
+        return dto;
     }
 }

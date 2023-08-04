@@ -55,4 +55,12 @@ public interface NoteService extends IService<Note> {
      * @return true or false 成功或失败
      */
     Boolean updateNoteStatus(Long noteId, Integer noteStatus);
+
+    /**
+     * 根据笔记id查询笔记
+     *
+     * @param noteId 笔记id
+     * @return 笔记
+     */
+    NoteDTO getNoteById(Long noteId);
 }
