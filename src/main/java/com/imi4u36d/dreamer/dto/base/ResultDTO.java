@@ -20,7 +20,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(name = "ResultDTO", description = "基本返回数据模型")
+@Schema(name = "基本返回数据模型", description = "基本返回数据模型")
 public class ResultDTO<T> implements Serializable {
 
     /**

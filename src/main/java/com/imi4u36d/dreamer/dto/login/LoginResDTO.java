@@ -20,7 +20,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(name = "LoginResDTO", description = "登陆返回数据模型")
+@Schema(name = "登陆返回数据模型", description = "登陆返回数据模型")
 public class LoginResDTO implements Serializable {
 
     @Schema(name = "userId", description = "用户id")

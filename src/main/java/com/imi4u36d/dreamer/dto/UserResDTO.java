@@ -18,7 +18,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(name = "UserResDTO", description = "用户信息返回数据模型")
+@Schema(name = "用户信息返回数据模型", description = "用户信息返回数据模型")
 public class UserResDTO implements Serializable {
 
     @Schema(name = "userId", description = "用户id")

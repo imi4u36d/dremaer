@@ -33,9 +33,6 @@ public class Note extends BaseEntity {
     @Schema(description = "笔记内容")
     private String noteContent;
 
-    @Schema(description = "作者名称")
-    private String authorName;
-
     public NoteDTO toDTO() {
         NoteDTO dto = new NoteDTO();
         BeanUtil.copyProperties(this, dto);

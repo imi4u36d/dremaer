@@ -1,5 +1,7 @@
 package com.imi4u36d.dreamer.dto.base;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 /**
  * 枚举 {@code ResCode} 返回码枚举
  * <p>详细描述:返回码枚举
@@ -8,6 +10,7 @@ package com.imi4u36d.dreamer.dto.base;
  * 创建时间：2023/7/19 14:43
  * @version v1.0.0
  */
+@Schema(name = "返回码枚举", description = "返回码枚举")
 public enum ResCode {
 
     /**

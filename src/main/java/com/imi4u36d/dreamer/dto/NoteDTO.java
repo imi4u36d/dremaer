@@ -22,7 +22,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(name = "NoteResDTO", description = "笔记返回数据模型")
+@Schema(name = "笔记返回数据模型", description = "笔记返回数据模型")
 public class NoteDTO implements Serializable {
 
     @Schema(description = "笔记id")
