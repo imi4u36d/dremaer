@@ -1,11 +1,11 @@
 package com.imi4u36d.dreamer.service;
 
 import cn.hutool.jwt.JWT;
-import cn.hutool.jwt.JWTUtil;
 import com.imi4u36d.dreamer.dto.login.LoginResDTO;
 import com.imi4u36d.dreamer.entity.user.User;
 import com.imi4u36d.dreamer.service.user.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,11 +31,8 @@ public class LoginServiceImpl implements LoginService {
     private static final String KEY = "imi4u36d";
 
     // 用户接口
-    private final UserService userService;
-
-    public LoginServiceImpl(UserService userService) {
-        this.userService = userService;
-    }
+    @Autowired
+    private UserService userService;
 
     /**
      * 后端管理系统登陆接口

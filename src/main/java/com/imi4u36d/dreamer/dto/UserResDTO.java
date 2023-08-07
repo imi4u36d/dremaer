@@ -29,4 +29,7 @@ public class UserResDTO implements Serializable {
 
     @Schema(name = "email", description = "邮箱")
     private String email;
+
+    @Schema(name = "token", description = "token")
+    private String token;
 }

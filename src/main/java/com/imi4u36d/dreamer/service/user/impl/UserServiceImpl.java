@@ -5,10 +5,13 @@ import cn.hutool.crypto.SecureUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.imi4u36d.dreamer.dto.UserResDTO;
+import com.imi4u36d.dreamer.dto.login.LoginResDTO;
 import com.imi4u36d.dreamer.entity.user.User;
 import com.imi4u36d.dreamer.mapper.UserMapper;
+import com.imi4u36d.dreamer.service.LoginService;
 import com.imi4u36d.dreamer.service.user.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,22 +30,44 @@ import java.util.Objects;
 @Transactional
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
+    @Autowired
+    private LoginService loginService;
+
     @Override
-    public Boolean signUp(String userName, String pwd) {
+    public UserResDTO signUp(String userName, String pwd) {
         // 校验用户名是否存在 true不存在 false存在
         Boolean isExist = checkUserNameIsExist(userName);
         if (isExist) {
             log.info("用户名{}已存在", userName);
-            return false;
+            return null;
         }
 
         // 保存用户信息
         User user = new User();
-        user.setId(IdUtil.getSnowflakeNextId());
+        long userId = IdUtil.getSnowflakeNextId();
+        user.setId(userId);
         user.setUsername(userName);
         // 设置加密密码
         user.setPwd(SecureUtil.sha256(pwd));
-        return save(user);
+        boolean save = save(user);
+        if (!save) {
+            log.info("保存用户信息失败");
+            throw new RuntimeException("保存用户信息失败");
+        }
+
+        // 执行免登操作
+        LoginResDTO login = loginService.login(user.getUsername(), user.getPwd());
+        if (Objects.isNull(login)) {
+            log.info("免登失败");
+            throw new RuntimeException("免登失败");
+        }
+
+        // 拼装返回对象
+        UserResDTO resUser = new UserResDTO();
+        resUser.setUserId(userId);
+        resUser.setUsername(userName);
+        resUser.setToken(login.getToken());
+        return resUser;
     }
 
     /**

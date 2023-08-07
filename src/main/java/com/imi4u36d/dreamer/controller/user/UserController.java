@@ -35,9 +35,9 @@ public class UserController {
             @Parameter(name = "username", description = "用户名", required = true),
             @Parameter(name = "pwd", description = "密码", required = true)
     })
-    public ResultDTO<Boolean> signUp(@RequestParam String username, @RequestParam String pwd) {
-        Boolean res = userService.signUp(username, pwd);
-        return res ? ResultDTO.success(res) : ResultDTO.fail("500", "注册失败");
+    public ResultDTO<UserResDTO> signUp(@RequestParam String username, @RequestParam String pwd) {
+        UserResDTO userResDTO = userService.signUp(username, pwd);
+        return Objects.nonNull(userResDTO) ? ResultDTO.success(userResDTO) : ResultDTO.fail("500", "用户名已存在");
     }
 
     @Operation(summary = "根据用户id查询用户信息", description = "根据用户id查询用户信息")

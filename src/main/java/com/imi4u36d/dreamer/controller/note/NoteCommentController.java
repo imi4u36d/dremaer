@@ -29,7 +29,7 @@ public class NoteCommentController {
     private NoteCommentService noteCommentService;
 
     @Operation(summary = "新增评论", description = "新增评论")
-    @PostMapping("/addNoteComment")
+    @GetMapping("/addNoteComment")
     @Parameters({
             @Parameter(name = "noteId", description = "笔记id"),
             @Parameter(name = "userId", description = "用户id"),

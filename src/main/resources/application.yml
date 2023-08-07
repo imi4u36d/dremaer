@@ -1,6 +1,8 @@
 spring:
   application:
     name: dreamer
+  main:
+    allow-circular-references: true
 
 #mybatis的相关配置
 mybatis:
@@ -14,3 +16,4 @@ mybatis:
 #JWT KEY 配置
 jwt:
   secret: imi4u36d
+

@@ -21,7 +21,7 @@ public interface UserService extends IService<User> {
      * @param pwd      密码
      * @return 注册结果 true成功 false失败
      */
-    Boolean signUp(String userName, String pwd);
+    UserResDTO signUp(String userName, String pwd);
 
     /**
      * 根据用户名和密码查询用户
