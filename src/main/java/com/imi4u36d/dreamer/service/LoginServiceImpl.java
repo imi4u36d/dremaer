@@ -6,6 +6,7 @@ import com.imi4u36d.dreamer.entity.user.User;
 import com.imi4u36d.dreamer.service.user.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,7 +29,8 @@ import java.util.Objects;
 public class LoginServiceImpl implements LoginService {
 
     // JWT KEY
-    private static final String KEY = "imi4u36d";
+    @Value("${jwt.secret}")
+    private String JWT_SECRET;
 
     // 用户接口
     @Autowired
@@ -51,7 +53,7 @@ public class LoginServiceImpl implements LoginService {
             tokenMap.put("username", user.getUsername());
             // 获取100分钟后的Date对象
             Date expAt = new Date(System.currentTimeMillis() + 100 * 60 * 1000);
-            String token = JWT.create().addPayloads(tokenMap).setKey(KEY.getBytes()).setExpiresAt(expAt).sign();
+            String token = JWT.create().addPayloads(tokenMap).setKey(JWT_SECRET.getBytes()).setExpiresAt(expAt).sign();
             return LoginResDTO.builder().userId(user.getId()).username(user.getUsername()).token(token).build();
         } else {
             return null;

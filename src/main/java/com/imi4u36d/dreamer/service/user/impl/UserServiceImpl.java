@@ -12,6 +12,7 @@ import com.imi4u36d.dreamer.service.LoginService;
 import com.imi4u36d.dreamer.service.user.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,6 +30,9 @@ import java.util.Objects;
 @Service
 @Transactional
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+
+    @Value("${jwt.secret}")
+    private String JWT_SECRET;
 
     @Autowired
     private LoginService loginService;
@@ -48,7 +52,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         user.setId(userId);
         user.setUsername(userName);
         // 设置加密密码
-        user.setPwd(SecureUtil.sha256(pwd));
+        user.setPwd(SecureUtil.sha256(JWT_SECRET + pwd));
         boolean save = save(user);
         if (!save) {
             log.info("保存用户信息失败");

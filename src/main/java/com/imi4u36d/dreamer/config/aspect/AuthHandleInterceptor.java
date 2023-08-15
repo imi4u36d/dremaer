@@ -6,7 +6,6 @@ import com.imi4u36d.dreamer.dto.base.ResultDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -22,9 +21,6 @@ import org.springframework.web.servlet.HandlerInterceptor;
 @Slf4j
 @Component
 public class AuthHandleInterceptor implements HandlerInterceptor {
-
-    @Value("${jwt.secret}")
-    private String JWT_SECRET;
 
     /**
      * 在这里验证用户身份，如果验证失败，返回false，否则返回true
